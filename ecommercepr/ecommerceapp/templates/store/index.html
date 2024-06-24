@@ -1,0 +1,12 @@
+<!-- ecommerceapp/templates/store/index.html -->
+{% extends "store/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="home-content">
+    <h2>Welcome to the E-commerce App!</h2>
+    <p>Discover our amazing range of products. Click the button below to start shopping.</p>
+    <a href="{% url 'product_list' %}" class="btn">View Products</a>
+</div>
+{% endblock %}

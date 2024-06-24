@@ -1,0 +1,39 @@
+
+
+<!-- ecommerceapp/templates/store/cart.html -->
+{% extends "store/base.html" %}
+{% block title %}Cart{% endblock %}
+
+{% block content %}
+    <h2>Shopping Cart</h2>
+    <div>
+        {% if cart_items_with_totals %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>Quantity&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>Price&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>Total&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in cart_items_with_totals %}
+                        <tr>
+                            <td>{{ item.item.product.name }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td>{{ item.item.quantity }}&nbsp;&nbsp;&nbsp;</td>
+                            <td>{{ item.item.product.price }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td>{{ item.total_price }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><a href="{% url 'remove_from_cart' item.item.id %}">Remove</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <p>Total: ${{ total }}</p>
+            <a href="{% url 'product_list' %}" class="button">Continue Shopping</a> <!-- Added class="button" -->
+        {% else %}
+            <p>Your cart is empty.</p>
+        {% endif %}
+    </div>
+{% endblock %}

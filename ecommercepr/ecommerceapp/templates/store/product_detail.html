@@ -1,0 +1,18 @@
+<!-- ecommerceapp/templates/store/product_detail.html -->
+{% extends "store/base.html" %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+<div class="product-detail">
+    <h2>{{ product.name }}</h2>
+    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+    <p>{{ product.description }}</p>
+    <p>${{ product.price }}</p>
+    <form action="{% url 'add_to_cart' product.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Add to Cart</button>
+    </form>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="{% url 'product_list' %}" class="btn">Back to Products</a>
+</div>
+{% endblock %}

@@ -1,0 +1,62 @@
+<!-- ecommerceapp/templates/store/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}E-commerce App{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'store/styles.css' %}">
+    <!-- Consider adding a favicon link if applicable -->
+    <style>
+        header {
+            background-color: yellow;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+    
+        header h1 a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: blue;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'index' %}">E-commerce App</a></h1>
+        <nav>
+            <a href="{% url 'index' %}">Home</a>&nbsp;&nbsp;&nbsp;
+            <a href="{% url 'product_list' %}">Products</a>&nbsp;&nbsp;&nbsp;
+            <a href="{% url 'cart' %}">Cart</a>&nbsp;&nbsp;&nbsp;
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+    <footer>
+        <p>&copy; {% now 'Y' %} E-commerce App</p>
+    </footer>
+</body>
+</html>

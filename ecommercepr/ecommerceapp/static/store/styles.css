@@ -1,0 +1,210 @@
+/* Reset default styles and apply global settings */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Set background color */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.product_list {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.product-list {
+    display: flex; /* or display: grid; */
+    flex-wrap: wrap; /* Ensure items wrap to new line if necessary */
+    justify-content: space-between; /* Adjust alignment of items */
+}
+
+.product-item {
+    width: calc(33.33% - 20px); /* Adjust width calculation for responsiveness */
+    margin-bottom: 20px; /* Add margin between items */
+    /* Additional styling for each product item */
+}
+
+
+.product-item {
+    border: 1px solid #ddd;
+    margin: 20px; /* Adjust as needed */
+    padding: 30px; /* Adjust as needed */
+    width: calc(33% - 20px); /* Adjust width calculation based on margins and paddings */
+    box-sizing: border-box;
+    background-color: rgb(164, 232, 230);
+}
+
+.product_item img {
+    max-width: 100%;
+
+}
+
+.product_item h3 {
+    margin: 10px 0;
+}
+
+.product-item {
+    width: 45%; /* Adjust based on your layout */
+    display: inline-block;
+    margin: 0 10px 20px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%; /* Ensure images fill their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.product_detail {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:yellow;
+    border: 1px solid #ddd;
+}
+
+.product_detail img {
+    max-width: 100%;
+}
+
+.cart_items {
+    list-style: none;
+    padding: 0;
+}
+
+.cart_items li {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.cart_items img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+/* ecommerceapp/static/store/styles.css */
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-items li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.cart-item-details {
+    flex: 1; /* Take up remaining space */
+    margin-right: 20px; /* Spacing between image and details */
+}
+
+.cart-item-image {
+    max-width: 100px; /* Adjust image width as needed */
+}
+
+.cart-total {
+    margin-top: 20px; /* Spacing between items and total */
+}
+
+.cart-actions {
+    margin-top: 20px; /* Spacing between total and continue shopping */
+}
+
+.cart-actions a {
+    text-decoration: none;
+    color: #28a745; /* Button/link color */
+}
+
+
+
+/* Ensure the cart items container is scrollable */
+.cart_items_container {
+    max-height: 400px; /* Adjust as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Ensure the continue shopping button is always visible */
+.continue_shopping_btn {
+    position: fixed; /* Fixed position for persistent visibility */
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.btn {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color:green;
+}
+
+form {
+    display: inline;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* store/styles.css */
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:green; /* Choose a color */
+    color: white;
+    text-decoration: none; /* Remove underline */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker color when hovered */
+}
+
